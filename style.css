@@ -1,0 +1,265 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+  
+    width: 80%;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    padding: 20px 0;
+}
+
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: right;
+   
+}
+
+nav ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    text-align: center;
+    padding: 100px 0;
+    
+    
+}
+
+
+.hero{
+    background-color: #050404;
+    height: 100vh;
+    
+    margin-top: -100px;
+    
+}
+
+.hero h2 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    color:white;
+    padding-top: 80px;  
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+    color: white;
+}
+.feature img{
+    height: 400px;
+    width: 500px;
+    border-radius: 10px;
+
+}
+
+.btn {
+    background-color: #9d194c;
+    color: #fff;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color:#f7f6f6;
+    color: #090909;
+}
+.about {
+    
+    background-color: #bd6767;
+    padding: 2rem 0;
+    text-align: center;
+}
+ul{
+    text-align: left;
+    margin-left: 400px;
+}
+.contact {
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 400px;
+    margin: auto;
+}
+
+.contact form input,
+.contact form textarea,
+.contact form button {
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+}
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+/* Basic styles remain the same */
+
+/* Animation for the header */
+header h1 {
+    color: #fff;
+    margin: 0;
+    font-size: 2em;
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fadeInDown 1s ease forwards;
+}
+
+/* Add more animations for other sections */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for the hero section */
+.hero {
+    background-image: url('background.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 50px 0;
+    opacity: 0;
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Animation for the hero content */
+.hero h2,
+.hero p,
+.btn {
+    opacity: 0;
+    animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for features and contact */
+.features .feature,
+.testimonials .testimonial {
+    opacity: 0;
+    animation: fadeInLeft 1s ease forwards;
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.testimonials .testimonial:nth-child(even) {
+    animation: fadeInRight 1s ease forwards;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ----- css for small screens----------- */
+@media only screen and (max-width:1200px){
+   header{
+    height: 10vh;
+    width: 100%;
+   } 
+  .container h1{
+    font-size: 25px;
+  }
+  nav{
+    display: flex;
+   
+  }
+  ul li a{
+    display: inline-block;
+    padding-top: 20px;
+    
+  }
+  .container1{
+    font-size: 8px;
+  }
+  .feature img{
+    height: 150px;
+    width: 200px;
+  }
+  .about{
+    height: 50vh;
+    width: 100%;
+    
+  }
+  .about h2,p{
+    text-align: center;
+    padding-left: -20px;
+  }
+  .about li{
+    
+    display: flex;
+    text-align: justify;
+    margin-left: -420px;
+  }
+
+}
